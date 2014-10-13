@@ -1,1 +1,1 @@
-An attempt to create an actually usable time tracker software.
+An attempt to create an actually useful time tracker.
