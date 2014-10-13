@@ -1,1 +1,1 @@
-An attempt to create an actually usable time tracker software.
+An attempt to create a "get the shits done" software.
