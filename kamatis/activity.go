@@ -2,8 +2,8 @@
 package kamatis
 
 import (
-	"fmt"
 	"time"
+    "labix.org/v2/mgo"
 )
 
 type ActivityType struct {
@@ -13,6 +13,7 @@ type ActivityType struct {
 }
 
 type Activity struct {
+    KamatiProperties      KamatiProperties `json:"kamaties_properties"`
 	StartedAt             time.Time    `json:"started_at"`
 	EndedAt               time.Time    `json:"ended_at"`
 	DeadLine              time.Time    `json:"deadline"`
@@ -24,4 +25,15 @@ type Activity struct {
 	InternalInterruptions int          `json:"internal_interruptions"`
 	ExternalInterruptions int          `json:"external_interruptions"`
 	Notes                 string       `json:"notes"`
+}
+
+/*
+Theres no constructor, but a New func is accepted.
+*/
+func New(activityType ActivityType, description string, stimatedKamatis int) *Activity {
+    activity := new(Activity)
+    //Default values.
+    activity.StartedAt = time.Now()
+    activity.Type = activityType
+    return activity
 }
