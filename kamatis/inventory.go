@@ -1,14 +1,14 @@
 package kamatis
 
 import (
-    "time"
-    "fmt"
+	"fmt"
+	"time"
 )
 
 //Things unplanned activities with a deadline, and activities that cannot
 //be done on unplanned.
 type InventorySheet struct {
-    Activities  []Activity
+	Activities []Activity `json:"activities"`
 }
 
 /**
@@ -16,4 +16,4 @@ type InventorySheet struct {
  * type RecordsSheet struct {
  *   CreatedAt   time.Time
  * }
-*/
+ */

@@ -1,16 +1,17 @@
 package kamatis
 
 import (
-    "time"
-    "fmt"
+	"fmt"
+	"time"
 )
 
 //Things ToDo "today" sheet.
 type ToDoList struct {
-    //TODO: Use geolocation [?].
-    Place                   string  
-    Date                    time.Time
-    ToDoList                []Activity 
-    ToDoUrgentUnplanned     []Activity
-    AvailableKamatis        int
+	//TODO: Use geolocation [?].
+	Place               string     `json:"place"`
+	Date                time.Time  `json:"created_at"`
+	EndedAt             time.Time  `json:"ended_at"`
+	ToDoList            []Activity `json:"todolist"`
+	ToDoUrgentUnplanned []Activity `json:"urgent_unplanned"`
+	AvailableKamatis    int        `json:"available_kamatis"`
 }

@@ -1,14 +1,14 @@
 package kamatis
 
 import (
-    "time"
-    "fmt"
+	"fmt"
+	"time"
 )
 
 type User struct {
-    FirstName       string
-    LastName        string
-    CreatedAt       time.Time
-    ToDoLists       []ToDoList
-    InventorySheet  InventorySheet
+	FirstName      string         `json:"first_name"`
+	LastName       string         `json:"last_name"`
+	CreatedAt      time.Time      `json:"created_at"`
+	ToDoLists      []ToDoList     `json:"todo_lists"`
+	InventorySheet InventorySheet `json:"inventory_sheet"`
 }
