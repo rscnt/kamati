@@ -2,7 +2,6 @@
 package kamatis
 
 import (
-	"labix.org/v2/mgo"
 	"time"
 )
 
